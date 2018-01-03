@@ -44,7 +44,6 @@ public class Hangman {
     public String randomWord(String[] array){
         Random wordPicker = new Random();
         int pick = wordPicker.nextInt(array.length);
-//        System.out.println(array[pick]);
         return array[pick];
     }
 
@@ -56,7 +55,6 @@ public class Hangman {
                     return true;
                 }
             }
-            //+1 turn counter
             counter++;
             return false;
         }
@@ -84,29 +82,13 @@ public class Hangman {
                     output.set(i, input);
                 }
             }
-//            userWon(letters, output);
         }
     }
 
 
-
-
-//    public void game(String input) {
-//        listBuilder();
-//        gameLoop(input);
-////        while (true) {
-////            gameLoop(input);
-////            if (userWon()) {
-////                break;
-////            }
-//
-//    }
-
     public boolean userWon() {
-//        System.out.println(output);
         for (int i=0; i<letters.length; i++) {
             if (!(letters[i].equals(output.get(i)))){
-//                System.out.println(letters[i] + " != " + output.get(i) + " --- " + (letters[i] != output.get(i)));
                 return false;
             }
         }

@@ -10,10 +10,12 @@ public class HangmanTest {
 
     @Test
     public void getWord_gettingAWord_string() throws Exception {
-        Hangman testGame = new Hangman();
+        Hangman testGame = new Hangman("medium");
         String output = testGame.getWord();
         assertEquals(true, output instanceof String);
     }
+    // Commented out tests break due to random word generation. Set word to "hello" to test.
+
 //    @Test
 //    public void getLetters_splitWordIntoLetters() throws Exception {
 //        Hangman testGame = new Hangman();
